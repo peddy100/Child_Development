@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tiny Minds</h1>
+    <form id="sign-up-form" action="/signup-form" method="POST">
+        <label for="input-fname" class="required">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="input-lname" class="required">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br>
+
+        <label for="input-email">eMail:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="input-phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br>
+
+        <label for="input-username" class="required">Username:</label>
+        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Please enter only letters and numbers" required><br>
+        <p class="instructions">You can use letters and numbers</p>
+        
+        <label for="input-password" class="required">Password:</label>
+        <input type="password" id="password" name="password" pattern="[a-zA-Z0-9!@#$%^&*()_-]+" title="Please enter only letters, numbers, and symbols" required><br>
+        <p class="instructions">8 or more characters with a mix of letters,<br> numbers, and symbols (eg. P@ssw0rd)</p><br>
+        <input type="submit" class="submitbutton" value="Sign Up">
+    </form>
+    <p>Already have an account? <a href="login">Log in</a></p>
+  </div>
+</body>
+</html>

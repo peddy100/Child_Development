@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />    
+</head>
+<body>
+    <div class="menu-bar">
+    <ul>
+        <li class="active"><a href="homepage"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#">Milestones</a>
+        <div class="sub-menu-1">
+            <ul>
+            <li><a href="#">2 Months</a></li>
+            <li><a href="#">4 Months</a></li>
+            <li><a href="#">6 Months</a></li>
+            <li><a href="#">9 Months</a></li>
+            <li><a href="#">1 Year</a></li>
+            <li><a href="#">2 Years</a></li>
+            <li><a href="#">3 Years</a></li>
+            <li><a href="#">4 Years</a></li>
+            <li><a href="#">5 Years</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="#">Library</a>
+        <div class="sub-menu-1">
+            <ul>
+            <li><a href="podcasts">Podcasts</a></li>
+            <li><a href="#">Audiobooks</a></li>
+            <li><a href="#">Educational</a></li>
+            </ul>
+        </div>
+        </li>
+        <li><a href="#">Comfort</a>
+        <div class="sub-menu-1">
+            <ul>
+            <li><a href="#">Lullabies</a></li>
+            <li><a href="soothing">Soothing Sounds</a></li>
+            <li><a href="#">Relaxation Techniques</a></li>
+            </ul>
+        </div>
+        </li>
+    </ul>
+    </div>
+    <div class="podcasts-container" >
+        <h1>Podcasts</h1>
+        <div class="podcasts-discription">
+            <p>A captivating collection of child-friendly podcasts on our app, featuring engaging stories and informative discussions that spark curiosity and foster learning in young minds.</p>
+            <ol>
+                <li>Click on the + to expand the discription</li>
+                <li>Click on the link to leave the app and visit the content</li>
+            </ol>
+        </div>
+        {{#each podcasts}}
+        <div class="title-and-tags">
+            <h2>{{ title_original }}</h2>
+                <div class="tags">
+                    {{#each genres}}
+                    <span class="tag">{{this}}</span>
+                    {{/each}}
+                </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-toggle">+</div>
+                <div class="accordion-content">
+                    <p>{{ stripHTML description_original }}</p>
+                    <a href="{{ listennotes_url }}" id="listen-link" >Listen</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <script src="./js/podcasts.js"></script>
+</body>
+</html>

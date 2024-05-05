@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label.required::after {
+    content: "*";
+    color: red;
+    margin-left: 3px;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.submitbutton {
+    background-color: #ab5000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    text-decoration: none;   
+}
+
+.submitbutton:hover{
+    background-color: #c76006;
+}
+.signup-button {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ab5000;
+    border-radius: 4px;
+    width: 250px;
+    color: #ab5000;
+    background-color: #ebeaea;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.signup-button:hover{
+    background-color: #ab5000;
+    color: #ebeaea;
+}
+
+.instructions {
+    font-size: 12px;
+    color: #888;
+    margin-top: -12px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #030303;
+    width: 43%
+}
+
+.menu-bar {
+    background-color: #ab5000;
+    text-align: center;
+}
+
+.menu-bar ul {
+    display:inline-flex;
+    list-style: none;
+    color:#ebeaea;
+}
+
+.menu-bar ul li {
+    width:120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color:#ebeaea;
+}
+
+.active, .menu-bar ul li:hover {
+    background-color: #c76006;
+    border-radius: 3px;
+}
+
+.menu-bar .fa-solid {
+    margin-right: 12px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background-color: #ec974c;
+    margin-top: 15px;
+    margin-left: -15px;
+    z-index: 3;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 115px;
+    padding: 10px;
+    border-bottom: 1px dotted #ebeaea;
+    border-radius: 0;
+    text-align: left;
+    margin-left: -10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 1rem;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-front {
+    background-color: #ccc;
+    color: #ab5000;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: #ab5000 ;
+    color: #ebeaea;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    padding: 20px;
+    margin-bottom: 1rem;
+}
+
+.card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.podcasts-container {
+    padding: 20px
+}
+
+.podcasts-discription {
+    width:auto;
+    height:auto;
+    background-color: #ccc;
+}
+
+.podcasts-discription ol {
+    margin: 10px 30px;
+}
+
+.accordion .accordion-toggle{
+    cursor: pointer;
+    color: rgb(26, 97, 251);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.accordion .accordion-content{
+    display: none;
+    padding: 10px;
+}
+
+.accordion .accordion-content p{
+    padding-bottom: 10px;
+}
+
+.title-and-tags {
+    display: flex;
+    align-items: center;
+}
+  
+h2 {
+    margin-right: 10px;
+}
+  
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag{
+    margin-right: 10px;
+    display: inline-flex;
+    padding: 4px 8px;
+    background-color: #ec974c;
+    color: #ebeaea;
+    border-radius: 4px;
+    font-size: x-small;
+}
